@@ -9,6 +9,6 @@ App (root component)
 ├─ TodoList
 │  └─ TodoItem
 │     ├─ TodoDeleteButton
-│     ├─ EditDeleteButton
+│     ├─ TodoEditButton
 └─ TodoFooter
 ```
