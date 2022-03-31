@@ -17,4 +17,4 @@ App (root component)
 - Update the add function accordingly. Add the username field. You can use UUID node package (recommended) or you can take the id via text input.
 
 BONUS TASK +2
-- Implement "edit todo" button. 
+- Implement "edit todo". 
