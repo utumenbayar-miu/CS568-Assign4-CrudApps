@@ -1,4 +1,4 @@
-# CS568-Assign4-ListsConditionals
+# CS568 - Assignment 4 - Lists and Conditionals
 - Conditionally show/hide the Todo list.
 - Add a field that inserts the task in to the todo list.
 
