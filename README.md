@@ -4,7 +4,7 @@
 
 ```
 App (root component)
-├─ AddTodo
+├─ TodoAdd
 ├─ TodoList
 │  └─ TodoItem
 │     ├─ TodoDeleteButton
