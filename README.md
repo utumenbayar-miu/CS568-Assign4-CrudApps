@@ -1,8 +1,11 @@
 # CS568 - Assignment 4 - CRUD apps
 
+## Main tasks
 1. Implement the CRUD operations for the sample **Students** app. Don't copy and past the code below. Instead, try to understand. Feel free to come up with your own CRUD logic.
 2. Implement the same tasks, CRUD operations for the **TodoList** app. Style it.
-3. Play with the useEffect hook. There are 3 alternatives in useEffect, componentDidMount, componentDidUpdate, and componentWillUnmount.
+
+## Microtask
+* Play with the useEffect hook. There are 3 alternatives in useEffect, componentDidMount, componentDidUpdate, and componentWillUnmount.
 
 Refer:
 ```
