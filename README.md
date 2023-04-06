@@ -19,7 +19,14 @@ Skip update and lifecycle (useEffect) for today. Do them tomorrow.
 ## Extra
 * When there are multiple operations on a single state like addStudent, updateStudent, deleteStudent on students state, you can use `useReducer` which is better practice. Replace `useState` with `useReducer`.
 
-Refer:
+## Main concepts we did with this assignment
+* Lift and shift state
+* Passing a function as a prop for data binding
+* How to get data from form
+* Conditionals, list, key
+* State immutability
+
+## Refer
 ```
 import { useEffect, useState } from "react";
 import "./App.css";
