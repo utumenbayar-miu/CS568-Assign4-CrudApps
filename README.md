@@ -7,6 +7,9 @@
 ## Microtask
 * Play with the useEffect hook. There are 3 alternatives in useEffect, componentDidMount, componentDidUpdate, and componentWillUnmount.
 
+## Extra
+* When there are multiple operations on a single state like addStudent, updateStudent, deleteStudent on students state, you can use `useReducer` which is better practice. Replace `useState` with `useReducer`.
+
 Refer:
 ```
 import { useEffect, useState } from "react";
