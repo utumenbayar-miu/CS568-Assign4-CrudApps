@@ -1,5 +1,14 @@
 # CS568 - Assignment 4 - CRUD apps
 
+This assignment is for two day classes, conidtionals and lifecycle.
+On first day, do the following:
+* READ (LIST)
+* CREATE
+* DELETE
+* CONDITIONALS and LIST
+
+Skip update and lifecycle (useEffect) for today. Do them tomorrow.
+
 ## Main tasks
 1. Implement the CRUD operations for the sample **Students** app. Don't copy and past the code below. Instead, try to understand. Feel free to come up with your own CRUD logic.
 2. Implement the same tasks, CRUD operations for the **TodoList** app. Style it.
