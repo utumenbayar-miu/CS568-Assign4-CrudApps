@@ -23,7 +23,7 @@ Main concepts we practice in this assignment:
 2. Implement the same tasks, CRUD operations for the **TodoList** app. Style it.
 
 ## Microtask
-* Play with the useEffect hook. There are 3 alternatives in useEffect, componentDidMount, componentDidUpdate, and componentWillUnmount.
+* Play with the useEffect hook. There are 3 alternatives in useEffect, componentDidMount, componentDidUpdate, and componentWillUnmount. You may want to comment out the `<React.StrictMode>` in the index.js. Otherwise, in dev mode, React calls your component multiple times to detect problems.
 * Practice `React.memo`.
 
 ## Extra
