@@ -9,6 +9,15 @@ On first day, do the following:
 
 Skip update and lifecycle (useEffect) for today. Do them tomorrow.
 
+> Please do the add and update in the same form. So you can practice state more. In order to share state between components, you may need to lift it up to the parent component.
+
+Main concepts we practice in this assignment:
+* Lift and shift state
+* Passing a function as a prop for data binding
+* How to get data from form
+* Conditionals, list, key
+* State immutability
+
 ## Main tasks
 1. Implement the CRUD operations for the sample **Students** app. Don't copy and past the code below. Instead, try to understand. Feel free to come up with your own CRUD logic.
 2. Implement the same tasks, CRUD operations for the **TodoList** app. Style it.
@@ -20,14 +29,94 @@ Skip update and lifecycle (useEffect) for today. Do them tomorrow.
 ## Extra
 * When there are multiple operations on a single state like addStudent, updateStudent, deleteStudent on students state, you can use `useReducer` which is better practice. Replace `useState` with `useReducer`.
 
-## Main concepts we did with this assignment
-* Lift and shift state
-* Passing a function as a prop for data binding
-* How to get data from form
-* Conditionals, list, key
-* State immutability
-
 ## Refer
+### Component lifecycle methods
+```
+import { useEffect } from "react";
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [isHidden, setisHidden] = useState(false);
+  return (
+    <div className="App">
+      {!isHidden && <MyComponent />}
+      <button onClick={() => setisHidden(!isHidden)}>hide/show</button>
+    </div>
+  );
+}
+
+function MyComponent() {
+  const [cntr, setcntr] = useState(0);
+  const [cntr2, setcntr2] = useState(0);
+  
+  useEffect(() => {
+    console.log("Component is mounted to the DOM!!");
+    // This is where you make an API call to the server (componentDidMount).
+    return () => {
+      // It is componentWillUnmount.
+      // Your logic when component is removed such as unsubscribe streaming data from the server.
+      console.log("Component is unmounted or removed from the DOM");
+    };
+  }, []);
+
+  // componentDidUpdate
+  useEffect(() => {
+    console.log("It is triggered every time the component is updated");
+    // if you pass a state in the dependency array, it will only get triggered when that state is changed. 
+  }, [cntr]);
+
+  return (
+    <p>
+      MyComponent, counter: {cntr}, counter 2: {cntr2},{" "}
+      <button
+        onClick={() => {
+          setcntr(cntr + 1);
+        }}
+      >
+        increment
+      </button>
+      <button
+        onClick={() => {
+          setcntr2(cntr2 + 1);
+        }}
+      >
+        increment 2
+      </button>
+    </p>
+  );
+}
+export default App;
+```
+### React.memo
+```
+import { memo, useState } from "react";
+import "./App.css";
+
+function App() {
+  const [cntr, setcntr] = useState(0);
+
+  return (
+    <div className="App">
+      <button onClick={() => setcntr(cntr + 1)}>{cntr}</button>
+      <HelloWithMemo name="Uno"/>
+    </div>
+  );
+}
+
+function Hello({name}) {
+  console.log("invoked");
+  return <p>hello {name}</p>
+}
+
+const HelloWithMemo = memo(function Hello({name}) {
+  console.log("invoked");
+  return <p>hello {name}</p>
+});
+
+export default App;
+```
+### Main code
 ```
 import { useEffect, useState } from "react";
 import "./App.css";
